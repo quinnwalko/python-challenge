@@ -9,5 +9,5 @@ profit_losses[]
 with open(budget_csv, newline="") as csvfile:
   csvreader = csv.reader(csvfile, delimiter=",")
   for row in csvreader:
-    date.append(row[1])
+    len(open(filename).readlines())
     
