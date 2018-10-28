@@ -1,13 +1,15 @@
 import os
 import csv
 
-budget_csv = os.path.join('..', 'Resources', 'budget_data.csv')
+csvpath = os.path.join("..", "C:/Users/quinn/AppData/Local/Programs/Python/Python37-32", "budget_data.csv")
 
-date[]
-profit_losses[]
+csvRows = []
 
-with open(budget_csv, newline="") as csvfile:
-  csvreader = csv.reader(csvfile, delimiter=",")
-  for row in csvreader:
-    len(open(filename).readlines())
+csvFileObj = open("budget_data.csv")
+csvreader = csv.reader(csvFileObj)
+for row in csvreader:
+    if csvreader.line_num == 1:
+        continue
+    csvRows.append(row)
+    
     
