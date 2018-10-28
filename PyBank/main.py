@@ -12,4 +12,8 @@ for row in csvreader:
         continue
     csvRows.append(row)
     
+    Number_of_Rows = len(list(csvreader))
+    print(Number_of_Rows)
+    
+    
     
