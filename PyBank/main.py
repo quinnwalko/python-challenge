@@ -9,8 +9,8 @@ csvFileObj = open("budget_data.csv")
 csvreader = csv.reader(csvFileObj)
 
 for row in csvreader:
-    Number_of_Rows = len(list(csvreader))
-    print(Number_of_Rows)
+    Number_of_Months = len(list(csvreader))
+    print(Number_of_Months)
     
 with open("budget_data.csv") as csv_file:
     csvreader = csv.DictReader(csv_file)
