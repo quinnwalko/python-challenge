@@ -14,3 +14,8 @@ Net_Profit_Losses
 budget_data_df["Profit/Losses"] - budget_data_df["Profit/Losses"].shift(1)
 budget_data_df["Difference"] = budget_data_df["Profit/Losses"] - budget_data_df["Profit/Losses"].shift(1)
 
+budget_data_df["Difference"].mean()
+
+budget_data_df["Difference"].max()
+
+budget_data_df["Difference"].min()
