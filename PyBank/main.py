@@ -1,22 +1,13 @@
-import os
-import csv
+import pandas as pd
 
-csvpath = os.path.join("..", "C:/Users/quinn/AppData/Local/Programs/Python/Python37-32", "budget_data.csv")
+budget_data = "budget_data.csv"
 
-csvRows = []
+budget_data_df = pd.read_csv(budget_data)
+budget_data_df.head()
 
-csvFileObj = open("budget_data.csv")
-csvreader = csv.reader(csvFileObj)
+Number_of_Months = budget_data_df["Date"].unique
+Number_of_Months
 
-for row in csvreader:
-    Number_of_Months = len(list(csvreader))
-    print(Number_of_Months)
-    
-with open("budget_data.csv") as csv_file:
-    csvreader = csv.DictReader(csv_file)
-    total = sum(float(row["Profit/Losses"]) for row in csvreader)
-print(total)
-    
-    
-    
-    
+Net_Profit_Losses = budget_data_df["Profit/Losses"].sum()
+Net_Profit_Losses
+
