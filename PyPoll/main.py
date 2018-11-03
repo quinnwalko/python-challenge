@@ -1,14 +1,10 @@
-import os
-import csv
+import pandas as pd
 
-csvpath = os.path.join("..", "C:/Users/quinn/AppData/Local/Programs/Python/Python37-32", "election_data.csv")
+election_data = "election_data.csv"
 
-csvRows = []
+election_data_df = pd.read_csv(election_data)
+election_data_df.head()
 
-csvFileObj = open("election_data.csv")
-csvreader = csv.reader(csvFileObj)
-
-for row in csvreader:
-    Number_of_Votes = len(list(csvreader))
-    print(Number_of_Votes)
+Total_Votes = election_data_df["Voter ID"].value_counts().sum
+Total_Votes
 
