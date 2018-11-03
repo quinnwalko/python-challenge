@@ -16,3 +16,6 @@ vote_count_df
 #Percentage of the vote for each candidate
 election_data_df.groupby(["Candidate"]).sum()/election_data_df["Voter ID"].sum() * 100
 
+
+if(election_data_df.groupby(["Candidate"]).sum()/election_data_df["Voter ID"].sum() * 100) >= 50:
+  print(winner = "Candidate")
